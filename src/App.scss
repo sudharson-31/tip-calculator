@@ -42,7 +42,7 @@ input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
                 display: flex;
                 justify-content: space-between;
                 label#e-msg{
-                    display: none;
+                    //display: none;
                     color: $orange;
                 }
             }
@@ -188,5 +188,89 @@ input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
             }
         }
 
+    }
+}
+
+
+
+@media only screen and (max-width: 700px){
+    body{
+        height: max-content;
+    }
+    #Header{
+        margin-top: 8%;
+    }
+    #Main{
+        width: 90vw !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0 !important;
+        margin-bottom: 5%;
+        .main-left{
+            margin-right: 0;
+        }
+    }
+    input{
+        width: 350px !important;
+    }
+    #peoplecount{
+        margin-bottom: 10%;
+    }
+    #tip-percent{
+        width: 80px !important;
+    }
+    .quick-percent{
+        width: 370px !important;
+        //column-gap: 10% !important;
+    }
+    .main-right{
+        height: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 450px){
+
+    #Main{
+        width: 100vw !important;
+        margin-bottom: 5%;
+    }
+
+}
+@media only screen and (max-width: 400px){
+    #Main{
+        width: 350px !important;
+        margin-bottom: 5%;
+    }
+    .main-left{
+        margin-left: 30%;
+    }
+    input{
+        width: 270px !important;
+        font-size: 1em !important;
+    }
+    .labels{
+        width: 79vw;
+        align-items: flex-end;
+    }
+    #e-msg{
+        font-size: 0.8em;
+        
+    }
+    #tip-percent{
+        width: 80px !important;
+        font-size: 1.5em !important;
+    }
+    .quick-percent{
+        width: 270px !important;
+        font-size: 0.8em;
+        //column-gap: 10% !important;
+    }
+    .main-right{
+        height: 270px;
+        width: 270px !important;
+        font-size: 0.8em;
+        margin-left: 10%;
     }
 }
