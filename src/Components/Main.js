@@ -29,7 +29,7 @@ export default function Main(){
         
     },[inpAmount,inpPerson,tipPercent])
     useEffect(()=>{
-        if(inpPerson==0){
+        if(inpPerson===0 || inpPerson==="0"){
             inpPersonRef.current.className = "error"
             document.getElementById("e-msg").style.display = "block";
         }
@@ -78,7 +78,6 @@ export default function Main(){
                         <label htmlFor="noOfPeople">Number of People</label>
                         <label htmlFor="noOfPeople" id="e-msg">Can't be zero</label>
                     </span>
-
                     <span >
                         <input id="peoplecount" ref={inpPersonRef} className="" type="number" min={0} name="noOfPeople" placeholder="0" value={inpPerson} onChange={e=>setInpPerson(e.target.value)}></input>
                     </span>
